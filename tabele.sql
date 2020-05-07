@@ -1,4 +1,4 @@
---DROP TABLE [hurtownie].[dbo].[lab6_fakt_operacje]
+DROP TABLE [hurtownie].[dbo].[lab6_fakt_operacje]
 DROP TABLE [hurtownie].[dbo].[lab6_wymiar_loty]
 DROP TABLE [hurtownie].[dbo].[lab6_wymiar_linie_lotnicze]
 DROP TABLE [hurtownie].[dbo].[lab6_wymiar_porty_lotnicze]
@@ -44,15 +44,14 @@ CREATE TABLE [hurtownie].[dbo].[lab6_wymiar_loty] (
     REFERENCES [hurtownie].[dbo].[lab6_wymiar_linie_lotnicze] ([kod IATA])
 )
 
--- CREATE TABLE [hurtownie].[dbo].[lab6_fakt_operacje] (
---     [numer lotu] int,
---     [id] nvarchar(50),
---     [start] datetime2(7),
---     [lądowanie] datetime2(7),
---     [ilość pasażerów na pokładzie] int,
---     [procentowe obłożenie miejsc na pokładzie] float,
---     CONSTRAINT PK_id_operacji PRIMARY KEY CLUSTERED (id),
---     CONSTRAINT FK_numer_lotu FOREIGN KEY ([numer lotu])
---     REFERENCES [hurtownie].[dbo].[lab6_wymiar_loty] ([numer lotu])
--- )
-
+CREATE TABLE [hurtownie].[dbo].[lab6_fakt_operacje] (
+    [id] bigint IDENTITY(1,1),
+    [numer lotu] bigint,
+    [start] datetime,
+    [lądowanie] datetime,
+    [ilość pasażerów na pokładzie] int,
+    [procentowe obłożenie miejsc na pokładzie] real,
+    CONSTRAINT PK_id_operacji PRIMARY KEY CLUSTERED (id),
+    CONSTRAINT FK_numer_lotu FOREIGN KEY ([numer lotu])
+    REFERENCES [hurtownie].[dbo].[lab6_wymiar_loty] ([numer lotu])
+)

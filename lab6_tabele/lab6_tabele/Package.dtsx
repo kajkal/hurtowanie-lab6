@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{1BAED1BE-3606-4697-A370-6DD9ACDE3CFF}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{5FD8FBF3-EE17-4EDC-B80F-2ADD7B0D539E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -29,7 +29,945 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1" />
+          version="1">
+          <components>
+            <component
+              refId="Package\fakt operacje\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\fakt operacje\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\fakt operacje\Merge Join.Inputs[Merge Join Left Input].Columns[numer lotu]"
+                      cachedDataType="i8"
+                      cachedName="numer lotu"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\fakt operacje\Sort.Outputs[Sort Output].Columns[numer lotu]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[numer lotu]"
+                      cachedDataType="i8"
+                      cachedName="numer lotu"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[numer lotu]" />
+                    <inputColumn
+                      refId="Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[start]"
+                      cachedDataType="date"
+                      cachedName="start"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[start]" />
+                    <inputColumn
+                      refId="Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[lądowanie]"
+                      cachedDataType="date"
+                      cachedName="lądowanie"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[lądowanie]" />
+                    <inputColumn
+                      refId="Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[ilość pasażerów na pokładzie]"
+                      cachedDataType="i4"
+                      cachedName="ilość pasażerów na pokładzie"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[ilość pasażerów na pokładzie]" />
+                    <inputColumn
+                      refId="Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      cachedDataType="r4"
+                      cachedName="procentowe obłożenie miejsc na pokładzie"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[procentowe obłożenie miejsc na pokładzie]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[numer lotu]"
+                      dataType="i8"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[numer lotu]"
+                      name="numer lotu"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\fakt operacje\Merge Join.Inputs[Merge Join Left Input].Columns[numer lotu]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[start]"
+                      dataType="date"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[start]"
+                      name="start">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[start]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[lądowanie]"
+                      dataType="date"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[lądowanie]"
+                      name="lądowanie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[lądowanie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[ilość pasażerów na pokładzie]"
+                      dataType="i4"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[ilość pasażerów na pokładzie]"
+                      name="ilość pasażerów na pokładzie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[ilość pasażerów na pokładzie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      dataType="r4"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      name="procentowe obłożenie miejsc na pokładzie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input].Columns[procentowe obłożenie miejsc na pokładzie]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\fakt operacje\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[lab6_fakt_operacje]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\fakt operacje\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{04201D80-42BE-421E-BA7E-C4C3C621D2F8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IHP6V9J.hurtownie]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[numer lotu]"
+                      cachedDataType="i8"
+                      cachedName="numer lotu"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[numer lotu]"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[numer lotu]" />
+                    <inputColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[start]"
+                      cachedDataType="date"
+                      cachedName="start"
+                      externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start]"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[start]" />
+                    <inputColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lądowanie]"
+                      cachedDataType="date"
+                      cachedName="lądowanie"
+                      externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lądowanie]"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[lądowanie]" />
+                    <inputColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ilość pasażerów na pokładzie]"
+                      cachedDataType="i4"
+                      cachedName="ilość pasażerów na pokładzie"
+                      externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ilość pasażerów na pokładzie]"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[ilość pasażerów na pokładzie]" />
+                    <inputColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      cachedDataType="r4"
+                      cachedName="procentowe obłożenie miejsc na pokładzie"
+                      externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[procentowe obłożenie miejsc na pokładzie]"
+                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[procentowe obłożenie miejsc na pokładzie]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[numer lotu]"
+                      dataType="i8"
+                      name="numer lotu" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start]"
+                      dataType="dbTimeStamp"
+                      name="start" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lądowanie]"
+                      dataType="dbTimeStamp"
+                      name="lądowanie" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ilość pasażerów na pokładzie]"
+                      dataType="i4"
+                      name="ilość pasażerów na pokładzie" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[procentowe obłożenie miejsc na pokładzie]"
+                      dataType="r4"
+                      name="procentowe obłożenie miejsc na pokładzie" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\fakt operacje\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\fakt operacje\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\fakt operacje\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\fakt operacje\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\fakt operacje\schedule (dane dla tabeli operacje)"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="schedule (dane dla tabeli operacje)"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Connections[FlatFileConnection]"
+                  connectionManagerID="{340F6440-CCE8-427E-A88C-EEC49625490D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[schedule.txt]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[numer lotu]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[numer lotu]"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[numer lotu]"
+                      name="numer lotu"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[start]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[start]"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[start]"
+                      name="start"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[lądowanie]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[lądowanie]"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[lądowanie]"
+                      name="lądowanie"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[ilość pasażerów na pokładzie]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[ilość pasażerów na pokładzie]"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[ilość pasażerów na pokładzie]"
+                      name="ilość pasażerów na pokładzie"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[procentowe obłożenie miejsc na pokładzie]"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      name="procentowe obłożenie miejsc na pokładzie"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[numer lotu]"
+                      dataType="i8"
+                      name="numer lotu" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[start]"
+                      dataType="date"
+                      name="start" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[lądowanie]"
+                      dataType="date"
+                      name="lądowanie" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[ilość pasażerów na pokładzie]"
+                      dataType="i4"
+                      name="ilość pasażerów na pokładzie" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].ExternalColumns[procentowe obłożenie miejsc na pokładzie]"
+                      dataType="r4"
+                      name="procentowe obłożenie miejsc na pokładzie" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\fakt operacje\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\fakt operacje\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\fakt operacje\Sort.Inputs[Sort Input].Columns[numer lotu]"
+                      cachedDataType="i8"
+                      cachedName="numer lotu"
+                      lineageId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].Columns[numer lotu]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\fakt operacje\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\fakt operacje\Sort.Outputs[Sort Output].Columns[numer lotu]"
+                      dataType="i8"
+                      lineageId="Package\fakt operacje\Sort.Outputs[Sort Output].Columns[numer lotu]"
+                      name="numer lotu"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].Columns[numer lotu]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\fakt operacje\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\fakt operacje\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\fakt operacje\Sort 1.Inputs[Sort Input].Columns[numer lotu]"
+                      cachedDataType="i8"
+                      cachedName="numer lotu"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[numer lotu]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\fakt operacje\Sort 1.Inputs[Sort Input].Columns[start]"
+                      cachedDataType="date"
+                      cachedName="start"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[start]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\fakt operacje\Sort 1.Inputs[Sort Input].Columns[lądowanie]"
+                      cachedDataType="date"
+                      cachedName="lądowanie"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[lądowanie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\fakt operacje\Sort 1.Inputs[Sort Input].Columns[ilość pasażerów na pokładzie]"
+                      cachedDataType="i4"
+                      cachedName="ilość pasażerów na pokładzie"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[ilość pasażerów na pokładzie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\fakt operacje\Sort 1.Inputs[Sort Input].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      cachedDataType="r4"
+                      cachedName="procentowe obłożenie miejsc na pokładzie"
+                      lineageId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[procentowe obłożenie miejsc na pokładzie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\fakt operacje\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[numer lotu]"
+                      dataType="i8"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[numer lotu]"
+                      name="numer lotu"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[numer lotu]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[start]"
+                      dataType="date"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[start]"
+                      name="start">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[start]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[lądowanie]"
+                      dataType="date"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[lądowanie]"
+                      name="lądowanie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[lądowanie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[ilość pasażerów na pokładzie]"
+                      dataType="i4"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[ilość pasażerów na pokładzie]"
+                      name="ilość pasażerów na pokładzie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[ilość pasażerów na pokładzie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      dataType="r4"
+                      lineageId="Package\fakt operacje\Sort 1.Outputs[Sort Output].Columns[procentowe obłożenie miejsc na pokładzie]"
+                      name="procentowe obłożenie miejsc na pokładzie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output].Columns[procentowe obłożenie miejsc na pokładzie]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="tabela loty (dla powiazania z numerem lotu)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[lab6_wymiar_loty]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Connections[OleDbConnection]"
+                  connectionManagerID="{04201D80-42BE-421E-BA7E-C4C3C621D2F8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IHP6V9J.hurtownie]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].Columns[numer lotu]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[numer lotu]"
+                      lineageId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].Columns[numer lotu]"
+                      name="numer lotu"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[numer lotu]"
+                      dataType="i8"
+                      name="numer lotu" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[linia lotnicza IATA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="linia lotnicza IATA" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[kontynent src]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="kontynent src" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[kontynent dst]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="kontynent dst" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[kraj src]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="kraj src" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[kraj dst]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="kraj dst" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[lotnisko src]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lotnisko src" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[lotnisko dst]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lotnisko dst" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[liczba międzylądowań]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="liczba międzylądowań" />
+                    <externalMetadataColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output].ExternalColumns[maszyny obsługujące lot]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="maszyny obsługujące lot" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Error Output].Columns[numer lotu]"
+                      dataType="i8"
+                      lineageId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Error Output].Columns[numer lotu]"
+                      name="numer lotu" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\fakt operacje.Paths[Flat File Source Output]"
+              endId="Package\fakt operacje\Sort 1.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\fakt operacje\schedule (dane dla tabeli operacje).Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\fakt operacje.Paths[Merge Join Output]"
+              endId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\fakt operacje.Paths[OLE DB Source Output]"
+              endId="Package\fakt operacje\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu).Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\fakt operacje.Paths[Sort Output]"
+              endId="Package\fakt operacje\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\fakt operacje\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\fakt operacje.Paths[Sort Output1]"
+              endId="Package\fakt operacje\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\fakt operacje\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -6650,55 +7588,83 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="244,42"
+          Id="Package\fakt operacje\schedule (dane dla tabeli operacje)"
+          TopLeft="50,95" />
+        <NodeLayout
+          Size="286,42"
+          Id="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu)"
+          TopLeft="431,262" />
+        <NodeLayout
           Size="98,42"
-          Id="118"
-          TopLeft="335,116" />
+          Id="Package\fakt operacje\Sort"
+          TopLeft="298,262" />
+        <EdgeLayout
+          Id="Package\fakt operacje.Paths[OLE DB Source Output]"
+          TopLeft="431,283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-35,0"
+              Start="0,0"
+              End="-27.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-27.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="107,42"
-          Id="153"
-          TopLeft="132,115" />
+          Id="Package\fakt operacje\Sort 1"
+          TopLeft="123,177" />
+        <EdgeLayout
+          Id="Package\fakt operacje.Paths[Flat File Source Output]"
+          TopLeft="174.25,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="130,42"
-          Id="29"
-          TopLeft="193,204" />
-        <NodeLayout
-          Size="171,42"
-          Id="56"
-          TopLeft="172,362" />
-        <NodeLayout
-          Size="96,42"
-          Id="2"
-          TopLeft="139,43" />
-        <NodeLayout
-          Size="170,42"
-          Id="85"
-          TopLeft="308,44" />
+          Id="Package\fakt operacje\Merge Join"
+          TopLeft="113,262" />
         <EdgeLayout
-          Id="202"
-          TopLeft="384,158">
+          Id="Package\fakt operacje.Paths[Sort Output]"
+          TopLeft="298,283">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-105.666666666667,46"
+              EndConnector="-55,0"
               Start="0,0"
-              End="-105.666666666667,38.5">
+              End="-47.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.2644376899696" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.2644376899696"
-                    Point2="0,27.2644376899696"
-                    Point3="-4,27.2644376899696" />
-                  <mssgle:LineSegment
-                    End="-101.666666666667,27.2644376899696" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-101.666666666667,27.2644376899696"
-                    Point2="-105.666666666667,27.2644376899696"
-                    Point3="-105.666666666667,31.2644376899696" />
-                  <mssgle:LineSegment
-                    End="-105.666666666667,38.5" />
+                    End="-47.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6708,124 +7674,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="201"
-          TopLeft="185.5,157">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="72.5,47"
-              Start="0,0"
-              End="72.5,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="4,23.5" />
-                  <mssgle:LineSegment
-                    End="68.5,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="68.5,23.5"
-                    Point2="72.5,23.5"
-                    Point3="72.5,27.5" />
-                  <mssgle:LineSegment
-                    End="72.5,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="199"
-          TopLeft="186.25,85">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,30"
-              Start="0,0"
-              End="0,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="200"
-          TopLeft="393,86">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9,30"
-              Start="0,0"
-              End="-9,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="-4,15" />
-                  <mssgle:LineSegment
-                    End="-5,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5,15"
-                    Point2="-9,15"
-                    Point3="-9,19" />
-                  <mssgle:LineSegment
-                    End="-9,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="163"
-          TopLeft="202,277" />
-        <EdgeLayout
-          Id="198"
-          TopLeft="256.75,246">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="203"
-          TopLeft="256.5,319">
+          Id="Package\fakt operacje.Paths[Sort Output1]"
+          TopLeft="177.25,219">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6837,6 +7687,44 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\fakt operacje\OLE DB Destination"
+          TopLeft="101,353" />
+        <EdgeLayout
+          Id="Package\fakt operacje.Paths[Merge Join Output]"
+          TopLeft="178,304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,49"
+              Start="0,0"
+              End="8.5,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="4,24.5" />
+                  <mssgle:LineSegment
+                    End="4.5,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,24.5"
+                    Point2="8.5,24.5"
+                    Point3="8.5,28.5" />
+                  <mssgle:LineSegment
+                    End="8.5,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6916,9 +7804,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6940,9 +7826,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6988,9 +7872,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7012,9 +7894,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7036,9 +7916,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7060,9 +7938,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7084,9 +7960,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7108,9 +7982,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7132,9 +8004,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7174,6 +8044,10 @@
           Size="171,42"
           Id="Package\wymiar loty\OLE DB Destination"
           TopLeft="75,639" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\wymiar loty\routes (dane dla tabeli loty)"
+          TopLeft="47,40" />
         <NodeLayout
           Size="98,42"
           Id="Package\wymiar loty\Sort"
@@ -7486,10 +8360,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="210,42"
-          Id="Package\wymiar loty\routes (dane dla tabeli loty)"
-          TopLeft="47,40" />
         <EdgeLayout
           Id="Package\wymiar loty.Paths[Flat File Source Output]"
           TopLeft="151,82">
@@ -7619,9 +8489,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7643,9 +8511,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7691,9 +8557,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7715,9 +8579,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7739,9 +8601,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7749,6 +8609,32 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\wymiar porty_lotnicze\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\fakt operacje\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

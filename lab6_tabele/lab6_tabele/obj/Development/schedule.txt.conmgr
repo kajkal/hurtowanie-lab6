@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="schedule.txt"
+  DTS:DTSID="{340F6440-CCE8-427E-A88C-EEC49625490D}"
+  DTS:CreationName="FLATFILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:Format="Delimited"
+      DTS:LocaleID="1033"
+      DTS:HeaderRowDelimiter="_x000D__x000A_"
+      DTS:RowDelimiter=""
+      DTS:TextQualifier="_x003C_none_x003E_"
+      DTS:CodePage="1252"
+      DTS:ConnectionString="C:\hurtownie-dane\schedule\schedule.txt">
+      <DTS:FlatFileColumns>
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="20"
+          DTS:TextQualified="True"
+          DTS:ObjectName="numer lotu"
+          DTS:DTSID="{72CC225E-6912-467B-A843-1B03D6B6A304}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="7"
+          DTS:TextQualified="True"
+          DTS:ObjectName="start"
+          DTS:DTSID="{2C81187B-ACF6-45C7-9741-3DBEE70E5B17}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="7"
+          DTS:TextQualified="True"
+          DTS:ObjectName="lądowanie"
+          DTS:DTSID="{E86C6E69-42D8-4278-9078-84D4F685DD8D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="3"
+          DTS:TextQualified="True"
+          DTS:ObjectName="ilość pasażerów na pokładzie"
+          DTS:DTSID="{C7AFB122-D807-4CC0-B66E-233247914DC9}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x000D__x000A_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="procentowe obłożenie miejsc na pokładzie"
+          DTS:DTSID="{BF04476E-84F0-43ED-842A-2CAAD8FA7015}"
+          DTS:CreationName="" />
+      </DTS:FlatFileColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
