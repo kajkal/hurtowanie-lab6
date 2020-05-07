@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="58"
-  DTS:VersionGUID="{5FD8FBF3-EE17-4EDC-B80F-2ADD7B0D539E}">
+  DTS:VersionBuild="59"
+  DTS:VersionGUID="{773D70B4-C11D-402C-BF3E-AD5618909BE2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -968,6 +968,22 @@
               startId="Package\fakt operacje\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\utwórz tabele"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1F812BFD-C87B-466C-B1A9-AF412E9A56B5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="utwórz tabele"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{04201D80-42BE-421E-BA7E-C4C3C621D2F8}"
+          SQLTask:SqlStatementSource="DROP TABLE IF EXISTS [hurtownie].[dbo].[lab6_fakt_operacje]&#xA;DROP TABLE IF EXISTS [hurtownie].[dbo].[lab6_wymiar_loty]&#xA;DROP TABLE IF EXISTS [hurtownie].[dbo].[lab6_wymiar_linie_lotnicze]&#xA;DROP TABLE IF EXISTS [hurtownie].[dbo].[lab6_wymiar_porty_lotnicze]&#xA;&#xA;CREATE TABLE [hurtownie].[dbo].[lab6_wymiar_porty_lotnicze] (&#xA;    [IATA lotniska] varchar(50),&#xA;    [typ lotniska] varchar(50),&#xA;    [kontynent] varchar(50),&#xA;    [kraj] varchar(50),&#xA;    [region] varchar(50),&#xA;    [miasto] varchar(50),&#xA;    [nazwa lotniska] varchar(150),&#xA;    [współrzędne GPS lotniska] varchar(100),&#xA;    CONSTRAINT PK_kod_IATA_lotniska PRIMARY KEY CLUSTERED ([IATA lotniska])&#xA;)&#xA;&#xA;CREATE TABLE [hurtownie].[dbo].[lab6_wymiar_linie_lotnicze] (&#xA;    [aktywna] varchar(50),&#xA;    [kraj] varchar(50),&#xA;    [linia lotnicza] varchar(100),&#xA;    [kod IATA] varchar(50),&#xA;    [kod ICAO] varchar(50),&#xA;    CONSTRAINT PK_kod_IATA_lini_lotniczej PRIMARY KEY CLUSTERED ([kod IATA])&#xA;)&#xA;&#xA;CREATE TABLE [hurtownie].[dbo].[lab6_wymiar_loty] (&#xA;    [numer lotu] bigint IDENTITY(1,1),&#xA;    [linia lotnicza IATA] varchar(50),&#xA;    [kontynent src] varchar(50),&#xA;    [kontynent dst] varchar(50),&#xA;    [kraj src] varchar(50),&#xA;    [kraj dst] varchar(50),&#xA;    [lotnisko src] varchar(50),&#xA;    [lotnisko dst] varchar(50),&#xA;    [liczba międzylądowań] varchar(50),&#xA;    [maszyny obsługujące lot] varchar(50),&#xA;    CONSTRAINT PK_numer_lotu PRIMARY KEY CLUSTERED ([numer lotu]),&#xA;    CONSTRAINT FK_lotnisko_src FOREIGN KEY ([lotnisko src])&#xA;    REFERENCES [hurtownie].[dbo].[lab6_wymiar_porty_lotnicze] ([IATA lotniska]),&#xA;    CONSTRAINT FK_lotnisko_dst FOREIGN KEY ([lotnisko dst])&#xA;    REFERENCES [hurtownie].[dbo].[lab6_wymiar_porty_lotnicze] ([IATA lotniska]),&#xA;    CONSTRAINT FK_linia_lotnicza FOREIGN KEY ([linia lotnicza IATA])&#xA;    REFERENCES [hurtownie].[dbo].[lab6_wymiar_linie_lotnicze] ([kod IATA])&#xA;)&#xA;&#xA;CREATE TABLE [hurtownie].[dbo].[lab6_fakt_operacje] (&#xA;    [id] bigint IDENTITY(1,1),&#xA;    [numer lotu] bigint,&#xA;    [start] datetime,&#xA;    [lądowanie] datetime,&#xA;    [ilość pasażerów na pokładzie] int,&#xA;    [procentowe obłożenie miejsc na pokładzie] real,&#xA;    CONSTRAINT PK_id_operacji PRIMARY KEY CLUSTERED (id),&#xA;    CONSTRAINT FK_numer_lotu FOREIGN KEY ([numer lotu])&#xA;    REFERENCES [hurtownie].[dbo].[lab6_wymiar_loty] ([numer lotu])&#xA;)&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -7484,6 +7500,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\fakt operacje" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{66EEB97C-FBBC-4F6D-BC8A-1A4E538BB4A8}"
+      DTS:From="Package\utwórz tabele"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\wymiar porty_lotnicze" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -7496,37 +7520,37 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="182,42"
           Id="Package\fakt operacje"
-          TopLeft="44,251" />
+          TopLeft="47,328" />
         <NodeLayout
-          Size="177,42"
+          Size="182,42"
           Id="Package\wymiar linie_lotnicze"
-          TopLeft="44,101" />
+          TopLeft="47,176.5" />
         <NodeLayout
           Size="182,42"
           Id="Package\wymiar loty"
-          TopLeft="44,176" />
+          TopLeft="47,252.25" />
         <NodeLayout
           Size="182,42"
           Id="Package\wymiar porty_lotnicze"
-          TopLeft="44,27" />
+          TopLeft="47,100.75" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="133.75,69">
+          TopLeft="138,142.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32"
+              EndConnector="0,33.75"
               Start="0,0"
-              End="0,24.5">
+              End="0,26.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5" />
+                    End="0,26.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7537,18 +7561,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="133.75,143">
+          TopLeft="138,218.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="0,33.75"
               Start="0,0"
-              End="0,25.5">
+              End="0,26.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,26.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7559,18 +7583,44 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="135,218">
+          TopLeft="138,294.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="0,33.75"
               Start="0,0"
-              End="0,25.5">
+              End="0,26.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,26.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="182,42"
+          Id="Package\utwórz tabele"
+          TopLeft="47,25" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="138,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.75"
+              Start="0,0"
+              End="0,26.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7736,6 +7786,32 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\fakt operacje\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\wymiar linie_lotnicze">
     <LayoutInfo>
@@ -8609,32 +8685,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\wymiar porty_lotnicze\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu)">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\fakt operacje\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

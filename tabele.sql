@@ -1,7 +1,7 @@
-DROP TABLE [hurtownie].[dbo].[lab6_fakt_operacje]
-DROP TABLE [hurtownie].[dbo].[lab6_wymiar_loty]
-DROP TABLE [hurtownie].[dbo].[lab6_wymiar_linie_lotnicze]
-DROP TABLE [hurtownie].[dbo].[lab6_wymiar_porty_lotnicze]
+DROP TABLE IF EXISTS [hurtownie].[dbo].[lab6_fakt_operacje]
+DROP TABLE IF EXISTS [hurtownie].[dbo].[lab6_wymiar_loty]
+DROP TABLE IF EXISTS [hurtownie].[dbo].[lab6_wymiar_linie_lotnicze]
+DROP TABLE IF EXISTS [hurtownie].[dbo].[lab6_wymiar_porty_lotnicze]
 
 CREATE TABLE [hurtownie].[dbo].[lab6_wymiar_porty_lotnicze] (
     [IATA lotniska] varchar(50),
