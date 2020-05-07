@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b6be8f09-8561-43ff-8d1b-bdee3f6a7251" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f8dc0d6d-478d-4708-8bd1-2272ca06147c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Lab6 Wymiar Loty</ID>
   <Name>Lab6 Wymiar Loty</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -42,57 +42,75 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="4755ec59-cf49-4ed7-96a8-6b25fc088769">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b0681d11-f3dd-4d3d-815b-40b0fca89ab7">
     <DataSourceViewID>Hurtownie</DataSourceViewID>
   </Source>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="d6ec005e-2f66-41de-8bef-10b84c36dc8f">
+  <ErrorConfiguration dwd:design-time-name="537941b1-391d-4bf0-9b71-e4fb3ba9c471">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="cdf50342-7a7a-468c-914d-f1e085f6369a">
+    <Attribute dwd:design-time-name="18e38659-675e-45c2-b5b8-889c2805e116">
       <ID>Numer Lotu</ID>
       <Name>Numer Lotu</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="ab65e34a-8b28-46ef-b4ab-50e1af373cc7">
+        <KeyColumn dwd:design-time-name="931fb762-ed17-4a1f-a32b-155592a3fb1e">
+          <DataType>BigInt</DataType>
           <NullProcessing>UnknownMember</NullProcessing>
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="496694f0-8589-433a-95fa-8ea7f1e4fff4">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="36259dd9-7099-4501-9b4a-4cc7008d13ff">
             <TableID>dbo_lab6_wymiar_loty</TableID>
             <ColumnID>numer_x0020_lotu</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="2d79e41f-0f05-4eb6-b07f-80c91dfde093">
+        <AttributeRelationship dwd:design-time-name="445bbc8e-12b4-4b13-a3f4-379fe6ea6f1b">
+          <AttributeID>Linia Lotnicza IATA</AttributeID>
+          <Name>Linia Lotnicza IATA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6abd46ad-131a-479d-a71b-63d0cfe838f6">
           <AttributeID>Lotnisko Src</AttributeID>
           <Name>Lotnisko Src</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="4e793e2d-bbe2-47a1-b8aa-1ec5e8597ce4">
+        <AttributeRelationship dwd:design-time-name="d70949f7-98d4-4658-a72b-9bd3d284c5cb">
           <AttributeID>Lotnisko Dst</AttributeID>
           <Name>Lotnisko Dst</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="d5c0ae49-6a0d-4598-a044-5886bd125985">
-          <AttributeID>Kod IATA</AttributeID>
-          <Name>Kod IATA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="7eb95140-8313-4741-a847-15e7bd06ca0e">
+    <Attribute dwd:design-time-name="ae2dfee5-496d-48ce-8923-01b45d09e83d">
+      <ID>Linia Lotnicza IATA</ID>
+      <Name>Linia Lotnicza IATA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="38d782c9-5355-4dd7-9ad4-2b70dc9c075b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6e29987-bb5f-4501-90d9-f997c9feb876">
+            <TableID>dbo_lab6_wymiar_loty</TableID>
+            <ColumnID>linia_x0020_lotnicza_x0020_IATA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1173b9c3-849b-4a95-943e-b664b071fac6">
       <ID>Lotnisko Src</ID>
       <Name>Lotnisko Src</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="83d60bb2-1ff8-4dc8-a6d5-5518c7f7fa45">
+        <KeyColumn dwd:design-time-name="3a6ce434-1dca-4a14-b79d-e414c4688c75">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="38412d5c-94be-4826-b763-273d62d41ef6">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4094ac5c-e1ee-451b-ad8b-0363f2e71ea0">
             <TableID>dbo_lab6_wymiar_loty</TableID>
             <ColumnID>lotnisko_x0020_src</ColumnID>
           </Source>
@@ -103,14 +121,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="cfa7e913-d11b-4acc-bac7-d20ebd288c5a">
+    <Attribute dwd:design-time-name="42c70a5d-d736-4570-9c98-2b2fe3aa9d4f">
       <ID>Lotnisko Dst</ID>
       <Name>Lotnisko Dst</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="19373824-25b2-4352-80b5-a8e412ca3de2">
+        <KeyColumn dwd:design-time-name="0e4e3864-e614-472f-8e67-6f55ce131bcf">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="8cb05aa7-76f8-4cb4-b8f5-658283dfeb2c">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5a292411-b08e-4de1-8c0e-a1d2889bda4d">
             <TableID>dbo_lab6_wymiar_loty</TableID>
             <ColumnID>lotnisko_x0020_dst</ColumnID>
           </Source>
@@ -118,24 +136,6 @@
       </KeyColumns>
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="6b9c6089-253c-466a-9bfe-bf210fa1b48a">
-      <ID>Kod IATA</ID>
-      <Name>Kod IATA</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="29acbb60-4e88-49fd-a72c-15bb9632dd36">
-          <NullProcessing>UnknownMember</NullProcessing>
-          <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="4d31dd92-ad55-4a8f-990f-1177627f83ab">
-            <TableID>dbo_lab6_wymiar_linie_lotnicze</TableID>
-            <ColumnID>kod_x0020_IATA</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
