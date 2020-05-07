@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "lab6_tabele", "lab6_tabele\lab6_tabele.dtproj", "{5369C937-4BE8-4978-B371-440FC3BD2984}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5369C937-4BE8-4978-B371-440FC3BD2984}.Development|Default.ActiveCfg = Development
+		{5369C937-4BE8-4978-B371-440FC3BD2984}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A05559A-B521-4D3E-918B-0E44B84BAE42}
+	EndGlobalSection
+EndGlobal
