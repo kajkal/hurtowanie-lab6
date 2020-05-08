@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="987cd11d-de32-4523-8f5d-40c849cd02cd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5b973d25-dd1a-4677-8bb7-6276cc8fa70c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Hurtownie</ID>
   <Name>Hurtownie</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -42,123 +42,82 @@
   <DataSourceID>Hurtownie</DataSourceID>
   <Schema>
     <xs:schema id="Hurtownie" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-      <xs:element name="Hurtownie" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="701f6876-c394-42ae-8a0c-644d44d10daa">
+      <xs:element name="Hurtownie" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="4ae8d47e-19c0-4335-bbc7-252754a9169d">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="dbo_lab6_fakt_operacje" msprop:design-time-name="4abf6870-646f-4ef2-90ab-cc1998be2b11" msprop:DbTableName="lab6_fakt_operacje" msprop:FriendlyName="lab6_fakt_operacje" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+            <xs:element name="dbo_lab6_fakt_operacje" msprop:design-time-name="3ca99618-93b9-4073-a0a7-192144b67a7f" msprop:DbTableName="lab6_fakt_operacje" msprop:FriendlyName="lab6_fakt_operacje" msprop:DbSchemaName="dbo" msprop:TableType="Table">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="f5cc3b15-bf10-44c5-8ad2-784c87b68cfd" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:long" />
-                  <xs:element name="numer_x0020_lotu" msprop:design-time-name="5488331a-6f7a-4f89-8177-023e971eba7d" msprop:DbColumnName="numer lotu" msprop:FriendlyName="numer lotu" type="xs:long" minOccurs="0" />
-                  <xs:element name="start" msprop:design-time-name="82c7602b-4acb-4849-8d64-0479b2166006" msprop:DbColumnName="start" msprop:FriendlyName="start" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="lądowanie" msprop:design-time-name="79dc8aa3-2f76-409e-99e4-ad4a47139421" msprop:DbColumnName="lądowanie" msprop:FriendlyName="lądowanie" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="ilość_x0020_pasażerów_x0020_na_x0020_pokładzie" msprop:design-time-name="970a3646-6aab-4c42-8cda-470c70c5603c" msprop:DbColumnName="ilość pasażerów na pokładzie" msprop:FriendlyName="ilość pasażerów na pokładzie" type="xs:int" minOccurs="0" />
-                  <xs:element name="procentowe_x0020_obłożenie_x0020_miejsc_x0020_na_x0020_pokładzie" msprop:design-time-name="728347a6-7c5b-40d2-b1df-45e76921111a" msprop:DbColumnName="procentowe obłożenie miejsc na pokładzie" msprop:FriendlyName="procentowe obłożenie miejsc na pokładzie" type="xs:float" minOccurs="0" />
+                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4a798016-7840-4f01-a7e0-cd74f013a1d2" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:long" />
+                  <xs:element name="numer_x0020_lotu" msprop:design-time-name="67d24166-29a8-4da2-bbc6-fe7e6f684ac2" msprop:DbColumnName="numer lotu" msprop:FriendlyName="numer lotu" type="xs:long" minOccurs="0" />
+                  <xs:element name="start" msprop:design-time-name="7251748f-a3fb-485d-a0a4-7f0d02482c8b" msprop:DbColumnName="start" msprop:FriendlyName="start" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="lądowanie" msprop:design-time-name="49927b80-81a1-46c3-9385-2f8fffdecb82" msprop:DbColumnName="lądowanie" msprop:FriendlyName="lądowanie" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="ilość_x0020_pasażerów_x0020_na_x0020_pokładzie" msprop:design-time-name="90445070-3679-4644-94e0-ef6376faba09" msprop:DbColumnName="ilość pasażerów na pokładzie" msprop:FriendlyName="ilość pasażerów na pokładzie" type="xs:int" minOccurs="0" />
+                  <xs:element name="procentowe_x0020_obłożenie_x0020_miejsc_x0020_na_x0020_pokładzie" msprop:design-time-name="50d1ba85-8918-44a5-912a-ac4a0d062155" msprop:DbColumnName="procentowe obłożenie miejsc na pokładzie" msprop:FriendlyName="procentowe obłożenie miejsc na pokładzie" type="xs:float" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_lab6_wymiar_linie_lotnicze" msprop:design-time-name="b2f2ba53-19b6-4c55-9239-c1ef2100061c" msprop:DbTableName="lab6_wymiar_linie_lotnicze" msprop:FriendlyName="lab6_wymiar_linie_lotnicze" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+            <xs:element name="dbo_lab6_wymiar_loty" msprop:design-time-name="1c280cf5-c84b-4391-85ec-04960f71dcb1" msprop:DbTableName="lab6_wymiar_loty" msprop:FriendlyName="lab6_wymiar_loty" msprop:DbSchemaName="dbo" msprop:TableType="Table">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="aktywna" msprop:design-time-name="60d1263b-1a3d-4ce9-9c64-f3604d69a31e" msprop:DbColumnName="aktywna" msprop:FriendlyName="aktywna" minOccurs="0">
+                  <xs:element name="numer_x0020_lotu" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="58e750bf-49ff-4fb0-9881-85ed23b07c00" msprop:DbColumnName="numer lotu" msprop:FriendlyName="numer lotu" type="xs:long" />
+                  <xs:element name="linia_x0020_lotnicza_x0020_IATA" msprop:design-time-name="b82c68fa-17e5-40ed-bd65-616403bfa730" msprop:DbColumnName="linia lotnicza IATA" msprop:FriendlyName="linia lotnicza IATA" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="kraj" msprop:design-time-name="a6e9fcc1-f2ea-4036-af4d-819359d6ff3e" msprop:DbColumnName="kraj" msprop:FriendlyName="kraj" minOccurs="0">
+                  <xs:element name="kontynent_x0020_src" msprop:design-time-name="8ff0e8eb-6c93-42c6-bc09-6f2164afa7b4" msprop:DbColumnName="kontynent src" msprop:FriendlyName="kontynent src" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="linia_x0020_lotnicza" msprop:design-time-name="3a15b0a2-1c12-4237-9d56-fa28c397854c" msprop:DbColumnName="linia lotnicza" msprop:FriendlyName="linia lotnicza" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="100" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="kod_x0020_IATA" msprop:design-time-name="04422266-7d86-4404-b001-a776e8694042" msprop:DbColumnName="kod IATA" msprop:FriendlyName="kod IATA">
+                  <xs:element name="kontynent_x0020_dst" msprop:design-time-name="780479f7-8f57-42fc-a78a-b343081c41e9" msprop:DbColumnName="kontynent dst" msprop:FriendlyName="kontynent dst" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="kod_x0020_ICAO" msprop:design-time-name="84a7d575-d27a-4745-99e9-682266bfe771" msprop:DbColumnName="kod ICAO" msprop:FriendlyName="kod ICAO" minOccurs="0">
+                  <xs:element name="kraj_x0020_src" msprop:design-time-name="b9b6b02b-7787-4edc-9dc4-841377557c77" msprop:DbColumnName="kraj src" msprop:FriendlyName="kraj src" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="dbo_lab6_wymiar_loty" msprop:design-time-name="f82b0283-fd69-49f4-ac2d-0e36dd0bbd43" msprop:DbTableName="lab6_wymiar_loty" msprop:FriendlyName="lab6_wymiar_loty" msprop:DbSchemaName="dbo" msprop:TableType="Table">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element name="numer_x0020_lotu" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4acff35a-3fd0-4521-a07e-32e4e37785a8" msprop:DbColumnName="numer lotu" msprop:FriendlyName="numer lotu" type="xs:long" />
-                  <xs:element name="linia_x0020_lotnicza_x0020_IATA" msprop:design-time-name="c4582dbc-4fad-459f-8a8b-32af29f9eb09" msprop:DbColumnName="linia lotnicza IATA" msprop:FriendlyName="linia lotnicza IATA" minOccurs="0">
+                  <xs:element name="kraj_x0020_dst" msprop:design-time-name="db466a94-bc9a-480e-ad7b-bd9f990a3d1f" msprop:DbColumnName="kraj dst" msprop:FriendlyName="kraj dst" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="kontynent_x0020_src" msprop:design-time-name="db37a292-db0f-4c29-b981-8a14155a3896" msprop:DbColumnName="kontynent src" msprop:FriendlyName="kontynent src" minOccurs="0">
+                  <xs:element name="lotnisko_x0020_src" msprop:design-time-name="6e100832-9d83-43d5-9eda-892d509c7527" msprop:DbColumnName="lotnisko src" msprop:FriendlyName="lotnisko src" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="kontynent_x0020_dst" msprop:design-time-name="16ec47a0-a99d-4719-be2c-e9755df9e972" msprop:DbColumnName="kontynent dst" msprop:FriendlyName="kontynent dst" minOccurs="0">
+                  <xs:element name="lotnisko_x0020_dst" msprop:design-time-name="fc494753-9946-403b-9894-3dbe93e886c0" msprop:DbColumnName="lotnisko dst" msprop:FriendlyName="lotnisko dst" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="kraj_x0020_src" msprop:design-time-name="09cd3102-1a07-4c31-bdf9-1d10d4171254" msprop:DbColumnName="kraj src" msprop:FriendlyName="kraj src" minOccurs="0">
+                  <xs:element name="liczba_x0020_międzylądowań" msprop:design-time-name="0d1d0f62-beeb-4a88-9ebb-0988c0a6b4b1" msprop:DbColumnName="liczba międzylądowań" msprop:FriendlyName="liczba międzylądowań" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="kraj_x0020_dst" msprop:design-time-name="eccc7079-046c-4b65-950f-4a2aa2eb520e" msprop:DbColumnName="kraj dst" msprop:FriendlyName="kraj dst" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="50" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="lotnisko_x0020_src" msprop:design-time-name="ad217d4e-e912-41a4-aec9-c8f5063652b6" msprop:DbColumnName="lotnisko src" msprop:FriendlyName="lotnisko src" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="50" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="lotnisko_x0020_dst" msprop:design-time-name="3384f900-0bfe-4261-b0c2-2d5604e9579c" msprop:DbColumnName="lotnisko dst" msprop:FriendlyName="lotnisko dst" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="50" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="liczba_x0020_międzylądowań" msprop:design-time-name="fa1638f6-4270-430d-a676-4028a6f6741f" msprop:DbColumnName="liczba międzylądowań" msprop:FriendlyName="liczba międzylądowań" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="50" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="maszyny_x0020_obsługujące_x0020_lot" msprop:design-time-name="cb71058f-fdd5-4b2b-8f70-c7cbb4d0aebb" msprop:DbColumnName="maszyny obsługujące lot" msprop:FriendlyName="maszyny obsługujące lot" minOccurs="0">
+                  <xs:element name="maszyny_x0020_obsługujące_x0020_lot" msprop:design-time-name="59281757-ead7-413e-bec2-ee11ea499c2f" msprop:DbColumnName="maszyny obsługujące lot" msprop:FriendlyName="maszyny obsługujące lot" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
@@ -168,62 +127,103 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_lab6_wymiar_porty_lotnicze" msprop:design-time-name="7f4e566a-c301-4f0e-9830-a94bc6620071" msprop:DbTableName="lab6_wymiar_porty_lotnicze" msprop:FriendlyName="lab6_wymiar_porty_lotnicze" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+            <xs:element name="dbo_lab6_wymiar_porty_lotnicze" msprop:design-time-name="3a6e07a3-6cae-4ef7-8719-0dbebba5bb22" msprop:DbTableName="lab6_wymiar_porty_lotnicze" msprop:FriendlyName="lab6_wymiar_porty_lotnicze" msprop:DbSchemaName="dbo" msprop:TableType="Table">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="IATA_x0020_lotniska" msprop:design-time-name="fb9dbeba-6bcf-40ca-97cd-617b36225b3d" msprop:DbColumnName="IATA lotniska" msprop:FriendlyName="IATA lotniska">
+                  <xs:element name="IATA_x0020_lotniska" msprop:design-time-name="7acd8971-84d1-4e2b-b1a4-e77596f1361e" msprop:DbColumnName="IATA lotniska" msprop:FriendlyName="IATA lotniska">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="typ_x0020_lotniska" msprop:design-time-name="9a1cfb1c-a99d-4963-9d59-b6b228460c7f" msprop:DbColumnName="typ lotniska" msprop:FriendlyName="typ lotniska" minOccurs="0">
+                  <xs:element name="typ_x0020_lotniska" msprop:design-time-name="066be201-0db1-4b46-8d93-4229946f71a4" msprop:DbColumnName="typ lotniska" msprop:FriendlyName="typ lotniska" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="kontynent" msprop:design-time-name="0f615bb6-8042-4d14-ac98-8be78e9ba5d7" msprop:DbColumnName="kontynent" msprop:FriendlyName="kontynent" minOccurs="0">
+                  <xs:element name="kontynent" msprop:design-time-name="1d5b6ecb-2ac0-42c1-bb35-d6c71bc340ce" msprop:DbColumnName="kontynent" msprop:FriendlyName="kontynent" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="kraj" msprop:design-time-name="9f35ab25-5269-4229-bf25-85a51741d283" msprop:DbColumnName="kraj" msprop:FriendlyName="kraj" minOccurs="0">
+                  <xs:element name="kraj" msprop:design-time-name="0216b1fc-2471-4665-aea0-f37377582e00" msprop:DbColumnName="kraj" msprop:FriendlyName="kraj" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="region" msprop:design-time-name="702abe84-f7d9-4c42-82c6-67ad0f5b6288" msprop:DbColumnName="region" msprop:FriendlyName="region" minOccurs="0">
+                  <xs:element name="region" msprop:design-time-name="e5ad9c9d-c235-489f-aea2-853af413e6ec" msprop:DbColumnName="region" msprop:FriendlyName="region" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="miasto" msprop:design-time-name="481d8bb5-abf8-4036-9287-dd8632e0ade6" msprop:DbColumnName="miasto" msprop:FriendlyName="miasto" minOccurs="0">
+                  <xs:element name="miasto" msprop:design-time-name="63a35c79-f916-491c-b518-9ce3a508b184" msprop:DbColumnName="miasto" msprop:FriendlyName="miasto" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="nazwa_x0020_lotniska" msprop:design-time-name="7f48480a-cb48-4ea8-93e3-748a40b472ed" msprop:DbColumnName="nazwa lotniska" msprop:FriendlyName="nazwa lotniska" minOccurs="0">
+                  <xs:element name="nazwa_x0020_lotniska" msprop:design-time-name="59278431-6a0a-4639-aae7-c597fadbd4dc" msprop:DbColumnName="nazwa lotniska" msprop:FriendlyName="nazwa lotniska" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="150" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="współrzędne_x0020_GPS_x0020_lotniska" msprop:design-time-name="2404e81b-8c26-42f0-ad2e-47a777dd1a59" msprop:DbColumnName="współrzędne GPS lotniska" msprop:FriendlyName="współrzędne GPS lotniska" minOccurs="0">
+                  <xs:element name="współrzędne_x0020_GPS_x0020_lotniska" msprop:design-time-name="b800de0d-6825-4f33-92dc-44fb0bd32897" msprop:DbColumnName="współrzędne GPS lotniska" msprop:FriendlyName="współrzędne GPS lotniska" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_lab6_wymiar_linie_lotnicze" msprop:design-time-name="c484c108-546e-4f71-a189-002f06b0cd50" msprop:DbTableName="lab6_wymiar_linie_lotnicze" msprop:FriendlyName="lab6_wymiar_linie_lotnicze" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="aktywna" msprop:design-time-name="e8793054-c7a1-4be9-9402-0e0b918eb4a5" msprop:DbColumnName="aktywna" msprop:FriendlyName="aktywna" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="kraj" msprop:design-time-name="00a7b727-0e4b-42b8-9740-c95e97e77d87" msprop:DbColumnName="kraj" msprop:FriendlyName="kraj" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="linia_x0020_lotnicza" msprop:design-time-name="c4f680e0-1f2f-4745-8802-3b87a5e98829" msprop:DbColumnName="linia lotnicza" msprop:FriendlyName="linia lotnicza" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="kod_x0020_IATA" msprop:design-time-name="ddefb535-66ad-4779-b94c-a46b8bf3869b" msprop:DbColumnName="kod IATA" msprop:FriendlyName="kod IATA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="kod_x0020_ICAO" msprop:design-time-name="03d22466-522a-46d5-911d-0189b110678b" msprop:DbColumnName="kod ICAO" msprop:FriendlyName="kod ICAO" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
@@ -236,10 +236,6 @@
           <xs:selector xpath=".//dbo_lab6_fakt_operacje" />
           <xs:field xpath="id" />
         </xs:unique>
-        <xs:unique name="dbo_lab6_wymiar_linie_lotnicze_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-          <xs:selector xpath=".//dbo_lab6_wymiar_linie_lotnicze" />
-          <xs:field xpath="kod_x0020_IATA" />
-        </xs:unique>
         <xs:unique name="dbo_lab6_wymiar_loty_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
           <xs:selector xpath=".//dbo_lab6_wymiar_loty" />
           <xs:field xpath="numer_x0020_lotu" />
@@ -247,6 +243,10 @@
         <xs:unique name="dbo_lab6_wymiar_porty_lotnicze_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
           <xs:selector xpath=".//dbo_lab6_wymiar_porty_lotnicze" />
           <xs:field xpath="IATA_x0020_lotniska" />
+        </xs:unique>
+        <xs:unique name="dbo_lab6_wymiar_linie_lotnicze_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_lab6_wymiar_linie_lotnicze" />
+          <xs:field xpath="kod_x0020_IATA" />
         </xs:unique>
         <xs:keyref name="FK_lotnisko_dst" refer="dbo_lab6_wymiar_porty_lotnicze_Constraint1">
           <xs:selector xpath=".//dbo_lab6_wymiar_loty" />

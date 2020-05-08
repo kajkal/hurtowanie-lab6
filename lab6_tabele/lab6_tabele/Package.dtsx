@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="59"
-  DTS:VersionGUID="{773D70B4-C11D-402C-BF3E-AD5618909BE2}">
+  DTS:VersionBuild="62"
+  DTS:VersionGUID="{A7EC0613-4C10-40A5-BBFA-AEE853B914C4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -269,24 +269,6 @@
                       cachedName="start"
                       externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[start]"
                       lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[start]" />
-                    <inputColumn
-                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lądowanie]"
-                      cachedDataType="date"
-                      cachedName="lądowanie"
-                      externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lądowanie]"
-                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[lądowanie]" />
-                    <inputColumn
-                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ilość pasażerów na pokładzie]"
-                      cachedDataType="i4"
-                      cachedName="ilość pasażerów na pokładzie"
-                      externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ilość pasażerów na pokładzie]"
-                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[ilość pasażerów na pokładzie]" />
-                    <inputColumn
-                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[procentowe obłożenie miejsc na pokładzie]"
-                      cachedDataType="r4"
-                      cachedName="procentowe obłożenie miejsc na pokładzie"
-                      externalMetadataColumnId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[procentowe obłożenie miejsc na pokładzie]"
-                      lineageId="Package\fakt operacje\Merge Join.Outputs[Merge Join Output].Columns[procentowe obłożenie miejsc na pokładzie]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -303,17 +285,17 @@
                       dataType="dbTimeStamp"
                       name="start" />
                     <externalMetadataColumn
-                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lądowanie]"
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lÄ…dowanie]"
                       dataType="dbTimeStamp"
-                      name="lądowanie" />
+                      name="lÄ…dowanie" />
                     <externalMetadataColumn
-                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ilość pasażerów na pokładzie]"
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iloÅ›Ä‡ pasaÅ¼erÃ³w na pokÅ‚adzie]"
                       dataType="i4"
-                      name="ilość pasażerów na pokładzie" />
+                      name="iloÅ›Ä‡ pasaÅ¼erÃ³w na pokÅ‚adzie" />
                     <externalMetadataColumn
-                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[procentowe obłożenie miejsc na pokładzie]"
+                      refId="Package\fakt operacje\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[procentowe obÅ‚oÅ¼enie miejsc na pokÅ‚adzie]"
                       dataType="r4"
-                      name="procentowe obłożenie miejsc na pokładzie" />
+                      name="procentowe obÅ‚oÅ¼enie miejsc na pokÅ‚adzie" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3952,22 +3934,6 @@
                       cachedName="kontynent src"
                       externalMetadataColumnId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[kontynent src]"
                       lineageId="Package\wymiar loty\Merge Join 2.Outputs[Merge Join Output].Columns[kontynent src]" />
-                    <inputColumn
-                      refId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[liczba międzylądowań]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="liczba międzylądowań"
-                      externalMetadataColumnId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba międzylądowań]"
-                      lineageId="Package\wymiar loty\Merge Join 2.Outputs[Merge Join Output].Columns[liczba międzylądowań]" />
-                    <inputColumn
-                      refId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[maszyny obsługujące lot]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="maszyny obsługujące lot"
-                      externalMetadataColumnId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[maszyny obsługujące lot]"
-                      lineageId="Package\wymiar loty\Merge Join 2.Outputs[Merge Join Output].Columns[maszyny obsługujące lot]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4018,17 +3984,17 @@
                       length="50"
                       name="lotnisko dst" />
                     <externalMetadataColumn
-                      refId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba międzylądowań]"
+                      refId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba miÄ™dzylÄ…dowaÅ„]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="liczba międzylądowań" />
+                      name="liczba miÄ™dzylÄ…dowaÅ„" />
                     <externalMetadataColumn
-                      refId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[maszyny obsługujące lot]"
+                      refId="Package\wymiar loty\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[maszyny obsÅ‚ugujÄ…ce lot]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="maszyny obsługujące lot" />
+                      name="maszyny obsÅ‚ugujÄ…ce lot" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6976,14 +6942,6 @@
                       cachedName="miasto"
                       externalMetadataColumnId="Package\wymiar porty_lotnicze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[miasto]"
                       lineageId="Package\wymiar porty_lotnicze\Merge Join 1.Outputs[Merge Join Output].Columns[miasto]" />
-                    <inputColumn
-                      refId="Package\wymiar porty_lotnicze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[współrzędne GPS lotniska]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="współrzędne GPS lotniska"
-                      externalMetadataColumnId="Package\wymiar porty_lotnicze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[współrzędne GPS lotniska]"
-                      lineageId="Package\wymiar porty_lotnicze\Merge Join 1.Outputs[Merge Join Output].Columns[współrzędne GPS lotniska]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7030,11 +6988,11 @@
                       length="150"
                       name="nazwa lotniska" />
                     <externalMetadataColumn
-                      refId="Package\wymiar porty_lotnicze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[współrzędne GPS lotniska]"
+                      refId="Package\wymiar porty_lotnicze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[wspÃ³Å‚rzÄ™dne GPS lotniska]"
                       codePage="1252"
                       dataType="str"
                       length="100"
-                      name="współrzędne GPS lotniska" />
+                      name="wspÃ³Å‚rzÄ™dne GPS lotniska" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7527,6 +7485,10 @@
           TopLeft="47,328" />
         <NodeLayout
           Size="182,42"
+          Id="Package\utwórz tabele"
+          TopLeft="47,25" />
+        <NodeLayout
+          Size="182,42"
           Id="Package\wymiar linie_lotnicze"
           TopLeft="47,176.5" />
         <NodeLayout
@@ -7603,10 +7565,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\utwórz tabele"
-          TopLeft="47,25" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="138,67">
@@ -7638,17 +7596,29 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="244,42"
-          Id="Package\fakt operacje\schedule (dane dla tabeli operacje)"
-          TopLeft="50,95" />
+          Size="98,42"
+          Id="Package\fakt operacje\Sort"
+          TopLeft="298,262" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\fakt operacje\OLE DB Destination"
+          TopLeft="101,353" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\fakt operacje\Sort 1"
+          TopLeft="123,177" />
         <NodeLayout
           Size="286,42"
           Id="Package\fakt operacje\tabela loty (dla powiazania z numerem lotu)"
           TopLeft="431,262" />
         <NodeLayout
-          Size="98,42"
-          Id="Package\fakt operacje\Sort"
-          TopLeft="298,262" />
+          Size="244,42"
+          Id="Package\fakt operacje\schedule (dane dla tabeli operacje)"
+          TopLeft="50,95" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\fakt operacje\Merge Join"
+          TopLeft="113,262" />
         <EdgeLayout
           Id="Package\fakt operacje.Paths[OLE DB Source Output]"
           TopLeft="431,283">
@@ -7671,10 +7641,40 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\fakt operacje\Sort 1"
-          TopLeft="123,177" />
+        <EdgeLayout
+          Id="Package\fakt operacje.Paths[Merge Join Output]"
+          TopLeft="178,304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,49"
+              Start="0,0"
+              End="8.5,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="4,24.5" />
+                  <mssgle:LineSegment
+                    End="4.5,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,24.5"
+                    Point2="8.5,24.5"
+                    Point3="8.5,28.5" />
+                  <mssgle:LineSegment
+                    End="8.5,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\fakt operacje.Paths[Flat File Source Output]"
           TopLeft="174.25,137">
@@ -7689,32 +7689,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\fakt operacje\Merge Join"
-          TopLeft="113,262" />
-        <EdgeLayout
-          Id="Package\fakt operacje.Paths[Sort Output]"
-          TopLeft="298,283">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-55,0"
-              Start="0,0"
-              End="-47.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-47.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7745,36 +7719,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\fakt operacje\OLE DB Destination"
-          TopLeft="101,353" />
         <EdgeLayout
-          Id="Package\fakt operacje.Paths[Merge Join Output]"
-          TopLeft="178,304">
+          Id="Package\fakt operacje.Paths[Sort Output]"
+          TopLeft="298,283">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.5,49"
+              EndConnector="-55,0"
               Start="0,0"
-              End="8.5,41.5">
+              End="-47.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5"
-                    Point2="0,24.5"
-                    Point3="4,24.5" />
-                  <mssgle:LineSegment
-                    End="4.5,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.5,24.5"
-                    Point2="8.5,24.5"
-                    Point3="8.5,28.5" />
-                  <mssgle:LineSegment
-                    End="8.5,41.5" />
+                    End="-47.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

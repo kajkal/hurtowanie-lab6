@@ -1,11 +1,142 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6d7712f0-2012-49f6-8a59-7dc06fa5ee2b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Hurtownie</ID>
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a411bb8e-19dc-461e-85b8-8e60f24c4721" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Hurtownie 1</ID>
   <Name>Hurtownie</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="9" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2689" scrolltop="3008" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="45429" y="26247" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="lab6_wymiar_loty" left="13415" top="14266" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4339" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000f310000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_lab6_wymiar_loty" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="lab6_wymiar_linie_lotnicze" left="14084" top="21666" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_lab6_wymiar_linie_lotnicze" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15185" top="18966" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_linia_lotnicza]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="15584" y="21666" />
+              <point x="15584" y="19266" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="lab6_wymiar_porty_lotnicze" left="13362" top="7447" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="4445" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00005d11000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_lab6_wymiar_porty_lotnicze" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13535" top="11367" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_lotnisko_dst]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="1" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13934" y="11866" />
+              <point x="13934" y="14266" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14085" top="11367" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_lotnisko_src]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="3" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14484" y="11866" />
+              <point x="14484" y="14266" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="lab6_fakt_operacje" left="20154" top="14980" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="6535" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000087190000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_lab6_fakt_operacje" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="17454" top="16367" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_numer_lotu]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="7" sourceattachpoint="23" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17754" y="16766" />
+              <point x="20154" y="16766" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,19 +152,19 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-2689</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>3008</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>13362</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
-      <Value>0</Value>
+      <Value>7447</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
@@ -43,78 +174,177 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="cee537f5-155e-45bc-8799-364b02af48b8">
+    <Dimension dwd:design-time-name="dcd39bc7-5020-43fc-8bbb-3c3111f1de1b">
       <ID>Lab6 Wymiar Loty</ID>
       <Name>Lab6 Wymiar Loty</Name>
       <DimensionID>Lab6 Wymiar Loty</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="3cb9d452-07d6-400b-b0e0-18aed1bdf0ee">
+        <Attribute dwd:design-time-name="06f5f8be-45ce-48ce-8b32-dc31496a0dc1">
           <AttributeID>Numer Lotu</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="8510ae73-cefb-4a2e-9651-66eb24de8719">
-          <AttributeID>Linia Lotnicza IATA</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="8e22ce77-e657-4f76-97ce-ad7a37333b73">
-          <AttributeID>Lotnisko Src</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="979c53ae-e120-405b-82f0-428e18a3f592">
+        <Attribute dwd:design-time-name="8c0fcc0a-7db2-49ff-a92a-17b9e3548c2c">
           <AttributeID>Lotnisko Dst</AttributeID>
         </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="d67af322-c245-4595-8e00-c212b4d3d5f0">
-      <ID>Lotnisko Src</ID>
-      <Name>Lotnisko Src</Name>
-      <DimensionID>Lab6 Wymiar Porty Lotnicze</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="7a70240a-4e68-4805-ad5b-fe68bb8c2203">
-          <AttributeID>IATA Lotniska</AttributeID>
+        <Attribute dwd:design-time-name="b3ee72c2-e5e0-49e3-adc8-53fb7a476782">
+          <AttributeID>Lotnisko Src</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ff4533de-5f59-4ef4-81a7-97eaa5f498cd">
+          <AttributeID>Kod IATA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="802ce741-4564-4ded-ade8-d29e201ab48f">
+          <AttributeID>Aktywna</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="08669a64-d026-4b94-83dc-da582e8abf8a">
+          <AttributeID>Kraj</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e6c0ed6b-1b82-4d6d-924d-61968e1790d4">
+          <AttributeID>Linia Lotnicza</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6312d6cc-df2e-4cf2-9668-fb9de92d407e">
+          <AttributeID>Kod ICAO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="63b0c648-2a4a-4464-9e08-a26454e22a31">
+          <AttributeID>Linia Lotnicza IATA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="552259f8-11ea-4032-865f-a2e599989348">
+          <AttributeID>Kontynent Src</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a3e7ffd-5208-4829-b25e-59b105e238a7">
+          <AttributeID>Kontynent Dst</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="36c7f00b-c341-465d-892b-1d05df986c0d">
+          <AttributeID>Kraj Src</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45db6b29-6d72-486d-9a1c-ecabfb650ab4">
+          <AttributeID>Kraj Dst</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="65e4f4ff-aaeb-4bcd-978b-f887d4306cfc">
+          <AttributeID>Liczba Międzylądowań</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d7f5b95-933b-4589-a7b5-35ee9c60ff5f">
+          <AttributeID>Maszyny Obsługujące Lot</AttributeID>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="92c60dad-d8a6-4ac8-a255-8c01e6ed2b6b">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="acf5c368-9879-4caa-b0de-47ce86a7edf9">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="d70b2efa-de53-4a2f-80d1-8526fc853c16">
-      <ID>Lotnisko Dst</ID>
-      <Name>Lotnisko Dst</Name>
+    <Dimension dwd:design-time-name="b1665b2b-b1d7-4440-ac8c-378cc2c2253b">
+      <ID>Lab6 Wymiar Porty Lotnicze</ID>
+      <Name>Lab6 Wymiar Porty Lotnicze</Name>
       <DimensionID>Lab6 Wymiar Porty Lotnicze</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="591ae4f0-6bd4-42c8-bf44-a361e5824ceb">
+        <Attribute dwd:design-time-name="33f9d0da-24fe-4c61-8074-68d0146f00d0">
           <AttributeID>IATA Lotniska</AttributeID>
         </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="7c590f2a-246e-4d23-9804-3d00a12463b8">
-      <ID>Lab6 Wymiar Loty - Lotnisko Src</ID>
-      <Name>Lab6 Wymiar Loty - Lotnisko Src</Name>
-      <DimensionID>Lab6 Wymiar Porty Lotnicze</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="400cacbc-e361-4292-a646-a4ee1d91c4fc">
-          <AttributeID>IATA Lotniska</AttributeID>
+        <Attribute dwd:design-time-name="0b43e1b9-0f2d-4fed-b2a9-cbf8913c553c">
+          <AttributeID>Typ Lotniska</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3cb31933-b059-447a-bbd3-2eb7becd9145">
+          <AttributeID>Kontynent</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ed8e4e01-ca82-4ae3-8f25-76946f2bc8e2">
+          <AttributeID>Kraj</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="93e0905f-84a2-4d8b-86f6-176838ce4f6a">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="17d3ed74-afba-4685-bf73-24aaf730c6ed">
+          <AttributeID>Miasto</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="244d9d9b-4edf-4a1d-99a1-7bc3db2cfb4a">
+          <AttributeID>Nazwa Lotniska</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="52c7ebfb-3f27-4be2-8621-227cd6a1c91f">
+          <AttributeID>Współrzędne GPS Lotniska</AttributeID>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="f92a6631-c00c-4518-99c7-fbc6949875f5">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="dc6851e8-5fea-47a4-981a-7e17b9b080b7">
+    <Dimension dwd:design-time-name="e648ad23-5b1c-41ab-9e3c-ab851191e246">
       <ID>Lab6 Wymiar Loty - Lotnisko Dst</ID>
       <Name>Lab6 Wymiar Loty - Lotnisko Dst</Name>
       <DimensionID>Lab6 Wymiar Porty Lotnicze</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="b54557c8-d126-4171-b9a1-2f88c60fa84e">
+        <Attribute dwd:design-time-name="1bb3d768-fa24-4204-aef6-13dc76168c0e">
           <AttributeID>IATA Lotniska</AttributeID>
         </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="d04d5d36-731d-456a-ae33-1fa0739e2e10">
-      <ID>Lab6 Wymiar Linie Lotnicze</ID>
-      <Name>Lab6 Wymiar Linie Lotnicze</Name>
-      <DimensionID>Lab6 Wymiar Linie Lotnicze</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="a5f76610-b9a3-404e-945f-1dddc22b6d72">
-          <AttributeID>Kod IATA</AttributeID>
+        <Attribute dwd:design-time-name="9d39f29b-88cc-4f23-a7e2-05e9c3e94c89">
+          <AttributeID>Typ Lotniska</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fbb923ce-dbeb-4545-868b-cab0354f3c23">
+          <AttributeID>Kontynent</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="525a4957-58e3-4195-84e1-6d39dc9be55c">
+          <AttributeID>Kraj</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="63c0ca0f-c4d8-4217-8225-51797bcda511">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf3e11e5-cb5a-4e5f-940e-934d1917294c">
+          <AttributeID>Miasto</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fa193e19-aa1f-432d-8b3f-f906d5c781d4">
+          <AttributeID>Nazwa Lotniska</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c36a1a64-ce91-430b-b108-a3e7509cd55b">
+          <AttributeID>Współrzędne GPS Lotniska</AttributeID>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="12fe16a2-b644-4ad0-8854-d6af06a8a437">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="c5193e35-fa49-4ace-9b09-5a3ccd497895">
+      <ID>Lab6 Wymiar Loty - Lotnisko Src</ID>
+      <Name>Lab6 Wymiar Loty - Lotnisko Src</Name>
+      <DimensionID>Lab6 Wymiar Porty Lotnicze</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e225785f-5f6d-4d60-9d5c-c2870861792f">
+          <AttributeID>IATA Lotniska</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6508dd06-743e-4f81-a5e0-f97eaeda6a8d">
+          <AttributeID>Typ Lotniska</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="afaecdab-f3fd-4a29-b2c1-53b4b5da449f">
+          <AttributeID>Kontynent</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9499f81e-9f89-4bff-834b-71c2b294524c">
+          <AttributeID>Kraj</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9c1b319e-f88e-482e-96ea-8c17e83b14fb">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f715285-a1f2-4c29-8558-b0a21af90ebc">
+          <AttributeID>Miasto</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="02ad67fe-62b4-49b8-a659-b444ece9071a">
+          <AttributeID>Nazwa Lotniska</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="466568a8-2c0b-42d7-8ca5-d2d804b62eaa">
+          <AttributeID>Współrzędne GPS Lotniska</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="cd8fe11c-7eaf-4282-bba5-4bdfb026e55c">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="2e4a1a16-751c-42c4-a179-e85a0f337798">
+    <MeasureGroup dwd:design-time-name="b7ff9628-c414-4f5e-b127-4bea2ae428eb">
       <ID>Lab6 Fakt Operacje</ID>
       <Name>Lab6 Fakt Operacje</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -122,37 +352,25 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="b823e006-593e-41f4-97a3-85c059357890">
+        <Measure dwd:design-time-name="caf86ccf-2c21-4813-a15b-0dd938f5b2b3">
           <ID>Ilość Pasażerów Na Pokładzie</ID>
           <Name>Ilość Pasażerów Na Pokładzie</Name>
-          <Source dwd:design-time-name="fe0a6e05-5884-47ca-8ff9-f5eb04cfe906">
+          <Source dwd:design-time-name="948d4655-1140-4be0-8fe3-a56fd7c81b69">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="9f5bf1b5-d884-4612-b577-655a9dcec79e">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0c880dbe-2a9a-480b-8117-9d47dab9c2d1">
               <TableID>dbo_lab6_fakt_operacje</TableID>
               <ColumnID>ilość_x0020_pasażerów_x0020_na_x0020_pokładzie</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="69da8c8a-805e-438f-964f-b26f36d07b94">
+        <Measure dwd:design-time-name="672e07ae-db6c-404d-b224-7a976469b4f2">
           <ID>Procentowe Obłożenie Miejsc Na Pokładzie</ID>
           <Name>Procentowe Obłożenie Miejsc Na Pokładzie</Name>
-          <Source dwd:design-time-name="b9f644f9-be80-4dca-9913-5fc3df1035a2">
+          <Source dwd:design-time-name="b9a61e73-da22-466c-822a-6608ff85cb5f">
             <DataType>Single</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="a370219f-03c6-4e51-9b1a-6352e1dd8d31">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="318688b8-670a-4772-943b-84c670314cb7">
               <TableID>dbo_lab6_fakt_operacje</TableID>
               <ColumnID>procentowe_x0020_obłożenie_x0020_miejsc_x0020_na_x0020_pokładzie</ColumnID>
-            </Source>
-          </Source>
-        </Measure>
-        <Measure dwd:design-time-name="1c5a14fd-b67c-4bcb-8c53-d3bb7dd63a61">
-          <ID>Lab6 Fakt Operacje Count</ID>
-          <Name>Lab6 Fakt Operacje Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="54144dbc-4449-4c87-8b05-c03755c713d0">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="57461338-d08a-4a6e-9a3e-5e06a4ed165a">
-              <TableID>dbo_lab6_fakt_operacje</TableID>
             </Source>
           </Source>
         </Measure>
@@ -160,16 +378,16 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e93f350c-d3ba-47d4-b660-861d2c532945">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3bd33cf9-28bf-4145-b7a9-9d506ca8a3cf">
           <CubeDimensionID>Lab6 Wymiar Loty</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="2bdb9b7c-2e67-4bec-a445-be75db0cc8ea">
+            <Attribute dwd:design-time-name="22563189-34dc-4868-a620-e9ef0cd7d79c">
               <AttributeID>Numer Lotu</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="4980a75b-48d2-41ea-8f18-a825141350f5">
+                <KeyColumn dwd:design-time-name="e2c7b5db-acf0-4dc2-bb93-97aa5a97883c">
                   <DataType>BigInt</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="04448274-76b9-473f-832b-867ab1b1da99">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c473c585-b7da-4835-946e-8a20f76d3b8d">
                     <TableID>dbo_lab6_fakt_operacje</TableID>
                     <ColumnID>numer_x0020_lotu</ColumnID>
                   </Source>
@@ -179,36 +397,10 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="908ed48b-04e9-454c-bda4-5e1bfd555641">
-          <CubeDimensionID>Lab6 Wymiar Linie Lotnicze</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="feb3a4bd-32d9-4ec5-9c3a-1643cf02c5b6">
-              <AttributeID>Kod IATA</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Lab6 Wymiar Loty</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Linia Lotnicza IATA</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="e7fa104f-1d73-4573-9278-a8c5f3608de6">
-          <CubeDimensionID>Lab6 Wymiar Loty - Lotnisko Src</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="0ac016b6-538d-498a-9f97-8770bf2b1569">
-              <AttributeID>IATA Lotniska</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Lab6 Wymiar Loty</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Lotnisko Src</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="0fd11a7d-8be4-4bbf-9dc5-67179f402a1a">
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="f73cbcfd-a3e6-4a4a-897a-cb748eacb6d8">
           <CubeDimensionID>Lab6 Wymiar Loty - Lotnisko Dst</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="94340cf8-9e31-4e7c-9d70-1f32f8d7bbe4">
+            <Attribute dwd:design-time-name="83d107e6-6e6b-4d79-ab38-46a37b5bc8d5">
               <AttributeID>IATA Lotniska</AttributeID>
               <Type>Granularity</Type>
             </Attribute>
@@ -218,116 +410,24 @@
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
-      </Dimensions>
-      <Partitions />
-    </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="a1f88274-7ed2-483a-9108-4a802e022416">
-      <ID>Lab6 Wymiar Loty</ID>
-      <Name>Lab6 Wymiar Loty</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-      <State>Unprocessed</State>
-      <Measures>
-        <Measure dwd:design-time-name="d51fda9e-4c82-4c57-a5b6-a7a1e0d09acf">
-          <ID>Lab6 Wymiar Loty Count</ID>
-          <Name>Lab6 Wymiar Loty Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="a2de8e96-063c-450c-bf0d-cb064aab2f24">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="ad77d453-c488-466c-88b6-f4b5f9be02be">
-              <TableID>dbo_lab6_wymiar_loty</TableID>
-            </Source>
-          </Source>
-        </Measure>
-      </Measures>
-      <StorageMode>Molap</StorageMode>
-      <ProcessingMode>Regular</ProcessingMode>
-      <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="b0e481ab-f232-4212-999f-4b8efa5a74ff">
-          <CubeDimensionID>Lab6 Wymiar Loty</CubeDimensionID>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="28c924c1-929b-4f47-b772-dde304422d8f">
+          <CubeDimensionID>Lab6 Wymiar Loty - Lotnisko Src</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="8323dab1-f5c8-4b61-8501-138e36bca33d">
-              <AttributeID>Numer Lotu</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="4cd7f08b-6c3c-4622-827e-4ebab9fbef84">
-                  <DataType>BigInt</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="67c3adc4-a751-4377-b50e-f7f252d4bbb0">
-                    <TableID>dbo_lab6_wymiar_loty</TableID>
-                    <ColumnID>numer_x0020_lotu</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bbd41345-06ae-4770-9d18-e75e16d05b4f">
-          <CubeDimensionID>Lab6 Wymiar Linie Lotnicze</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="bb4880e2-3e9c-4be7-a3ca-7b085714ae92">
-              <AttributeID>Kod IATA</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="44b4a367-5e6d-40d5-b062-603461298a8f">
-                  <DataType>WChar</DataType>
-                  <DataSize>50</DataSize>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="092299b0-a953-431c-9c37-51c1b9506d46">
-                    <TableID>dbo_lab6_wymiar_loty</TableID>
-                    <ColumnID>linia_x0020_lotnicza_x0020_IATA</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a5d66cba-0813-4a1a-a322-e6eea5a42890">
-          <CubeDimensionID>Lotnisko Src</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="32f5eb10-778e-48d0-91d3-4b8f395033e9">
+            <Attribute dwd:design-time-name="9adf65c0-f85b-4414-b305-541627bf6338">
               <AttributeID>IATA Lotniska</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="85323e61-12f1-43ac-a8c6-f9f03c196aa4">
-                  <DataType>WChar</DataType>
-                  <DataSize>50</DataSize>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e6ffbea4-5b0d-42ac-af25-b9d6f4fc2e87">
-                    <TableID>dbo_lab6_wymiar_loty</TableID>
-                    <ColumnID>lotnisko_x0020_src</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
           </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ab70b764-9171-48ff-882f-ea0630f75fc7">
-          <CubeDimensionID>Lotnisko Dst</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="c5b72422-c33e-4f61-8459-1db209336050">
-              <AttributeID>IATA Lotniska</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="09bb90b7-9f6b-48ac-b294-a9478633b34c">
-                  <DataType>WChar</DataType>
-                  <DataSize>50</DataSize>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4a5ddea4-28b6-466b-bc7c-dd050b8d84c5">
-                    <TableID>dbo_lab6_wymiar_loty</TableID>
-                    <ColumnID>lotnisko_x0020_dst</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
+          <IntermediateCubeDimensionID>Lab6 Wymiar Loty</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Lotnisko Src</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
       </Dimensions>
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="68c94daf-b913-4c9c-a2cb-279f714e5e4e">
+  <Source dwd:design-time-name="e1a13ebf-1263-4bda-8be7-1245f91607f1">
     <DataSourceViewID>Hurtownie</DataSourceViewID>
   </Source>
 </Cube>
